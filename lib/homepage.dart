@@ -65,11 +65,47 @@ class HomePage extends StatelessWidget {
                 title: Text("Pagina Inicio"),
               ),
             ),
-            
-            
-        ],
-      ) ,
-     )
+            InkWell(
+              onTap: null,
+              child: ListTile(
+                onTap: (){Navigator.popAndPushNamed(context, "/perfil");},
+                leading: Icon(Icons.person, color: Colors.black),
+                title: Text("Perfil"),
+              ),
+            ),
+             InkWell(
+              onTap: null,
+              child: ListTile(
+                onTap: (){Navigator.pushNamed(context, "/bebidas");},
+                leading: Icon(Icons.shopping_basket, color: Colors.red),
+                title: Text("Bebidas"),
+              ),
+            ),
+             Divider(),
+            InkWell(
+              onTap: null,
+              child: ListTile(
+                leading: Icon(Icons.help, color: Colors.green),
+                title: Text("About"),
+              ),
+            ),
+            InkWell(
+              onTap: null,
+              child: ListTile(
+                leading: Icon(
+                  Icons.power_settings_new,
+                  color: Colors.black,
+                ),
+                title: Text("Log out"),
+              ),
+            )
+          ],
+        ),
+      ),
+          body: Center(
+        child: Text("Home Page"),
+      ),
     );
   }
-}
+}   
+            
